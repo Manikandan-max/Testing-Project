@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c3a4a4eb-d50d-46b4-a930-327caf447735" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/src/test/java/org/project/qa/testcases/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/target/test-classes/org/project/qa/testcases/Login.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/Default Suite/AutomationPracticeApp.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/Default Suite/AutomationPracticeApp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/bullet_point.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/collapseall.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/emailable-report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/failed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/jquery-3.6.0.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/junitreports/TEST-org.project.qa.testcases.Login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/navigator-bullet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/old/Default Suite/AutomationPracticeApp.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/old/Default Suite/classes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/old/Default Suite/groups.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/old/Default Suite/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/old/Default Suite/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/old/Default Suite/methods-alphabetical.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/old/Default Suite/methods-not-run.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/old/Default Suite/methods.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/old/Default Suite/reporter-output.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/old/Default Suite/testng.xml.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/old/Default Suite/toc.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/old/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/passed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/skipped.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/testng-reports.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/testng-reports.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/testng-reports1.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/testng-reports2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/testng-results.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AutomationPracticeApp/test-output/testng.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/AutomationPracticeApp" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2d4YO0U9x7Y05P0BBbbDxeDpFbV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/hariv/OneDrive/Documents/Testing Projects",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c3a4a4eb-d50d-46b4-a930-327caf447735" name="Changes" comment="" />
+      <created>1709268781810</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1709268781810</updated>
+      <workItem from="1709268782809" duration="307000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

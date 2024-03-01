@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-29T14:24:14 IST" name="Default Suite" finished-at="2024-02-29T14:24:26 IST" duration-ms="12047">
+    <groups>
+    </groups>
+    <test started-at="2024-02-29T14:24:14 IST" name="AutomationPracticeApp" finished-at="2024-02-29T14:24:26 IST" duration-ms="12047">
+      <class name="org.project.qa.testcases.Login">
+        <test-method signature="verifyWithInvalidCredentials()[pri:0, instance:org.project.qa.testcases.Login@762ef0ea]" started-at="2024-02-29T14:24:15 IST" name="verifyWithInvalidCredentials" finished-at="2024-02-29T14:24:21 IST" duration-ms="6449" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWithInvalidCredentials -->
+        <test-method signature="verifyWithValidCredentials()[pri:0, instance:org.project.qa.testcases.Login@762ef0ea]" started-at="2024-02-29T14:24:21 IST" name="verifyWithValidCredentials" finished-at="2024-02-29T14:24:26 IST" duration-ms="5507" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyWithValidCredentials -->
+      </class> <!-- org.project.qa.testcases.Login -->
+    </test> <!-- AutomationPracticeApp -->
+  </suite> <!-- Default Suite -->
+</testng-results>
