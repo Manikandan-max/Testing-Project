@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_Suite" class="navigator-link">
-              <span class="suite-name border-passed">Default Suite</span>
+              <span class="suite-name border-failed">Default Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_Suite" class="hide-methods failed suite-Default_Suite"> (hide)</a> <!-- hide-methods failed suite-Default_Suite -->
+                      <a href="#" panel-name="suite-Default_Suite" class="show-methods failed suite-Default_Suite"> (show)</a> <!-- show-methods failed suite-Default_Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_Suite" title="org.project.qa.testcases.Search" class="method navigator-link" hash-for-method="verifySearchingWithoutProductName">verifySearchingWithoutProductName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,12 +117,12 @@
                     <div class="method-list-content passed suite-Default_Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="org.project.qa.testcases.Login" class="method navigator-link" hash-for-method="verifyWithInvalidCredentials">verifyWithInvalidCredentials</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_Suite" title="org.project.qa.testcases.Search" class="method navigator-link" hash-for-method="verifySearchingWithAnExistingProductName">verifySearchingWithAnExistingProductName</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_Suite" title="org.project.qa.testcases.Login" class="method navigator-link" hash-for-method="verifyWithValidCredentials">verifyWithValidCredentials</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_Suite" title="org.project.qa.testcases.Search" class="method navigator-link" hash-for-method="verifySearchingWithNonExistingProductName">verifySearchingWithNonExistingProductName</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_Suite -->
@@ -123,24 +137,54 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_Suite" class="panel Default_Suite">
-          <div class="suite-Default_Suite-class-passed">
+          <div class="suite-Default_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">org.project.qa.testcases.Login</span>
+              <img src="failed.png"/>
+              <span class="class-name">org.project.qa.testcases.Search</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyWithInvalidCredentials">
-                  </a> <!-- verifyWithInvalidCredentials -->
-                  <span class="method-name">verifyWithInvalidCredentials</span>
+                  <a name="verifySearchingWithoutProductName">
+                  </a> <!-- verifySearchingWithoutProductName -->
+                  <span class="method-name">verifySearchingWithoutProductName</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //input[@id=&apos;button-search&apos;]/following-sibling::p
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.12.0&apos;, revision: &apos;249f2a7d1b*&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.21&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.project.qa.testcases.Search.verifySearchingWithoutProductName(Search.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_Suite-class-failed -->
+          <div class="suite-Default_Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">org.project.qa.testcases.Search</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySearchingWithAnExistingProductName">
+                  </a> <!-- verifySearchingWithAnExistingProductName -->
+                  <span class="method-name">verifySearchingWithAnExistingProductName</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyWithValidCredentials">
-                  </a> <!-- verifyWithValidCredentials -->
-                  <span class="method-name">verifyWithValidCredentials</span>
+                  <a name="verifySearchingWithNonExistingProductName">
+                  </a> <!-- verifySearchingWithNonExistingProductName -->
+                  <span class="method-name">verifySearchingWithNonExistingProductName</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -157,7 +201,7 @@
 &lt;suite name=&quot;Default Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;AutomationPracticeApp&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;org.project.qa.testcases.Login&quot;/&gt;
+      &lt;class name=&quot;org.project.qa.testcases.Search&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- AutomationPracticeApp --&gt;
 &lt;/suite&gt; &lt;!-- Default Suite --&gt;
@@ -197,20 +241,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyWithInvalidCredentials')
-data.setCell(0, 2, 'org.project.qa.testcases.Login')
-data.setCell(0, 3, 6449);
+data.setCell(0, 1, 'verifySearchingWithoutProductName')
+data.setCell(0, 2, 'org.project.qa.testcases.Search')
+data.setCell(0, 3, 11535);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyWithValidCredentials')
-data.setCell(1, 2, 'org.project.qa.testcases.Login')
-data.setCell(1, 3, 5507);
+data.setCell(1, 1, 'verifySearchingWithAnExistingProductName')
+data.setCell(1, 2, 'org.project.qa.testcases.Search')
+data.setCell(1, 3, 428);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifySearchingWithNonExistingProductName')
+data.setCell(2, 2, 'org.project.qa.testcases.Search')
+data.setCell(2, 3, 392);
 window.suiteTableData['Default_Suite']= { tableData: data, tableDiv: 'times-div-Default_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 12 seconds</span>
               <div id="times-div-Default_Suite">
               </div> <!-- times-div-Default_Suite -->
             </div> <!-- times-div -->
@@ -236,15 +284,45 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">org.project.qa.testcases.Login</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">verifyWithInvalidCredentials</span>
+              <div class="chronological-class-name">org.project.qa.testcases.Search</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">openUrl</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- test-method -->
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyWithValidCredentials</span>
-                <span class="method-start">6452 ms</span>
+                <span class="method-name">verifySearchingWithAnExistingProductName</span>
+                <span class="method-start">6624 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">7053 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">openUrl</span>
+                <span class="method-start">7242 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySearchingWithNonExistingProductName</span>
+                <span class="method-start">10210 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">10603 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">openUrl</span>
+                <span class="method-start">10732 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">verifySearchingWithoutProductName</span>
+                <span class="method-start">14602 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">26153 ms</span>
+              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

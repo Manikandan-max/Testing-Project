@@ -4,18 +4,22 @@
 <th>Method name</th>
 <th>Groups</th>
 </tr><tr>
-<td>org.project.qa.testcases.Login</td>
+<td>org.project.qa.testcases.Search</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@Test</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>verifyWithInvalidCredentials</td>
+<td>verifySearchingWithoutProductName</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>verifyWithValidCredentials</td>
+<td>verifySearchingWithAnExistingProductName</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>verifySearchingWithNonExistingProductName</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -24,8 +28,16 @@
 <td align='center' colspan='3'>@BeforeMethod</td>
 </tr>
 <tr>
+<td>&nbsp;</td>
+<td>openUrl</td>
+<td>&nbsp;</td></tr>
+<tr>
 <td align='center' colspan='3'>@AfterMethod</td>
 </tr>
+<tr>
+<td>&nbsp;</td>
+<td>tearDown</td>
+<td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@AfterClass</td>
 </tr>
