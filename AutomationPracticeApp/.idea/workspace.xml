@@ -4,28 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f038889-41b2-42f5-8daf-e62c0c870be8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/project/qa/config/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/project/qa/utils/ElementUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/project/qa/base/BaseClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/project/qa/testcases/Register.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/project/qa/testcases/Search.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="9f038889-41b2-42f5-8daf-e62c0c870be8" name="Changes" comment="Register and Search Functionalities Test Added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/project/qa/testData/testData.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/project/qa/utils/ReadExcel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/project/qa/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/project/qa/config/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/project/qa/base/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/project/qa/base/BaseClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/project/qa/testcases/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/project/qa/testcases/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/project/qa/testcases/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/project/qa/testcases/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/project/qa/testcases/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/project/qa/testcases/Search.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/org/project/qa/testcases/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/project/qa/testcases/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/Default Suite/AutomationPracticeApp.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/Default Suite/AutomationPracticeApp.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/Default Suite/AutomationPracticeApp.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/Default Suite/AutomationPracticeApp.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/emailable-report.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Default Suite/classes.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Default Suite/classes.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Default Suite/methods-alphabetical.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Default Suite/methods-alphabetical.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Default Suite/methods.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Default Suite/methods.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Default Suite/testng.xml.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Default Suite/testng.xml.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/Default Suite/toc.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/Default Suite/toc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/old/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/old/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test-output/testng-results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,11 +61,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hariv\OneDrive\Documents\Testing Projects\AutomationPracticeApp\src\main\java\org\project\qa\testData" />
       <recent name="C:\Users\hariv\OneDrive\Documents\Testing Projects\AutomationPracticeApp\src\test\resources" />
       <recent name="C:\Users\hariv\OneDrive\Documents\Testing Projects\AutomationPracticeApp\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/hariv/OneDrive/Documents/Testing Projects/AutomationPracticeApp/src/test/resources/testng.xml">
+  <component name="RunManager" selected="TestNG.Login.verifyWithValidCredentials">
     <configuration name="C:/Users/hariv/OneDrive/Documents/Testing Projects/AutomationPracticeApp/src/main/resources/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TutorialsNinjaProject" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/resources/testng.xml" />
@@ -89,10 +79,21 @@
     </configuration>
     <configuration name="C:/Users/hariv/OneDrive/Documents/Testing Projects/AutomationPracticeApp/src/test/resources/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TutorialsNinjaProject" />
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testng.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="SUITE" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="test-out" />
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
-      <listeners />
+      <listeners>
+        <listener class="org.testng.reporters.TestHTMLReporter" />
+      </listeners>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -101,6 +102,24 @@
       <module name="TutorialsNinjaProject" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Login.verifyWithValidCredentials" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="TutorialsNinjaProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.project.qa.testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.project.qa.testcases" />
+      <option name="MAIN_CLASS_NAME" value="org.project.qa.testcases.Login" />
+      <option name="METHOD_NAME" value="verifyWithValidCredentials" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -131,36 +150,6 @@
       <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Search" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="TutorialsNinjaProject" />
-      <shortenClasspath name="NONE" />
-      <useClassPathOnly />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.project.qa.testcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SUITE_NAME" value="" />
-      <option name="PACKAGE_NAME" value="org.project.qa.testcases" />
-      <option name="MAIN_CLASS_NAME" value="org.project.qa.testcases.Search" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="test-output" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="true" />
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners>
-        <listener class="org.testng.reporters.EmailableReporter2" />
-      </listeners>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -213,19 +202,19 @@
     <list>
       <item itemvalue="TestNG.org.project.qa.testcases" />
       <item itemvalue="TestNG.Register" />
+      <item itemvalue="TestNG.Login.verifyWithValidCredentials" />
       <item itemvalue="TestNG.C:/Users/hariv/OneDrive/Documents/Testing Projects/AutomationPracticeApp/src/main/resources/testng.xml" />
       <item itemvalue="TestNG.C:/Users/hariv/OneDrive/Documents/Testing Projects/AutomationPracticeApp/src/test/resources/testng.xml" />
       <item itemvalue="TestNG.C:/Users/hariv/OneDrive/Documents/Testing Projects/AutomationPracticeApp/testng.xml" />
-      <item itemvalue="TestNG.Search" />
       <item itemvalue="TestNG.Search.verifySearchingWithoutProductName" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.Login.verifyWithValidCredentials" />
         <item itemvalue="TestNG.C:/Users/hariv/OneDrive/Documents/Testing Projects/AutomationPracticeApp/src/test/resources/testng.xml" />
         <item itemvalue="TestNG.C:/Users/hariv/OneDrive/Documents/Testing Projects/AutomationPracticeApp/src/main/resources/testng.xml" />
         <item itemvalue="TestNG.C:/Users/hariv/OneDrive/Documents/Testing Projects/AutomationPracticeApp/testng.xml" />
         <item itemvalue="TestNG.Search.verifySearchingWithoutProductName" />
-        <item itemvalue="TestNG.Search" />
       </list>
     </recent_temporary>
   </component>
@@ -244,11 +233,26 @@
       <workItem from="1709297349028" duration="593000" />
       <workItem from="1709520617646" duration="6410000" />
       <workItem from="1709605094159" duration="4400000" />
+      <workItem from="1709609532975" duration="99000" />
+      <workItem from="1709616636354" duration="4389000" />
     </task>
+    <task id="LOCAL-00001" summary="Register and Search Functionalities Test Added">
+      <option name="closed" value="true" />
+      <created>1709609611724</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1709609611724</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Register and Search Functionalities Test Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Register and Search Functionalities Test Added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

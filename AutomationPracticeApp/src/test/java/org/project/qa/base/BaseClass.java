@@ -7,6 +7,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.project.qa.utils.ElementUtils;
+import org.project.qa.utils.ReadExcel;
+import org.testng.annotations.DataProvider;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -19,9 +21,18 @@ public class BaseClass {
 
     public  WebDriver driver;
    public Properties prop;
+   public Properties dataProp;
 public BaseClass(){
     prop=new Properties();
     File propFile=new File(System.getProperty("user.dir")+"/src/main/java/org/project/qa/config/config.properties");
+    dataProp=new Properties();
+    File file=new File(System.getProperty("user.dir")+"/src/main/java/org/project/qa/testData/testData.properties");
+    try (FileInputStream fis = new FileInputStream(file)) {
+        dataProp.load(fis);
+    } catch (IOException e) {
+        throw new RuntimeException(e);
+    }
+
     try {
         FileInputStream readFile=new FileInputStream(propFile);
         prop.load(readFile);
@@ -59,5 +70,10 @@ public BaseClass(){
             driver.get(prop.getProperty("url"));
             return driver;
     }
+    @DataProvider(name = "getData")
+    public Object[][] sendData(){
+        Object[][] data= ReadExcel.getTestData(dataProp.getProperty("sheetName"));
+        return data;
 
+    }
 }

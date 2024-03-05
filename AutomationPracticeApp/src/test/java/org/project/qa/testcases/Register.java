@@ -26,53 +26,53 @@ public class Register extends BaseClass {
     }
     @Test(priority = 1)
     public void verifyRegisteringAnAccountWithMandatoryField(){
-        driver.findElement(By.xpath("//input[@id='input-firstname']")).sendKeys("Testing");
-        driver.findElement(By.id("input-lastname")).sendKeys("Practice");
+        driver.findElement(By.xpath("//input[@id='input-firstname']")).sendKeys(dataProp.getProperty("firstName"));
+        driver.findElement(By.id("input-lastname")).sendKeys(dataProp.getProperty("lastName"));
         driver.findElement(By.id("input-email")).sendKeys(generateEmailWithTimeStamp());
-        driver.findElement(By.id("input-telephone")).sendKeys("9878675643");
-        driver.findElement(By.id("input-password")).sendKeys("134123");
-        driver.findElement(By.xpath("//input[@id='input-confirm']")).sendKeys("134123");
+        driver.findElement(By.id("input-telephone")).sendKeys(dataProp.getProperty("telephoneNumber"));
+        driver.findElement(By.id("input-password")).sendKeys(dataProp.getProperty("password"));
+        driver.findElement(By.xpath("//input[@id='input-confirm']")).sendKeys(dataProp.getProperty("password"));
         driver.findElement(By.xpath("//input[@name='agree']")).click();
         driver.findElement(By.xpath("//input[@value='Continue']")).click();
 
         String actualHeading=driver.findElement(By.xpath("//div[@id='content']/h1")).getText();
         System.out.println(actualHeading);
-        Assert.assertEquals(actualHeading,"Your Account Has Been Created!","Account Sucess Page is not created");
+        Assert.assertEquals(actualHeading,dataProp.getProperty("successMessage"),"Account Success Page is not created");
 
     }
 
     @Test(priority = 2)
     public void verifyRegisteringAnAccountByProvidingAllFields(){
-        driver.findElement(By.xpath("//input[@id='input-firstname']")).sendKeys("Testing");
-        driver.findElement(By.id("input-lastname")).sendKeys("Practice");
+        driver.findElement(By.xpath("//input[@id='input-firstname']")).sendKeys(dataProp.getProperty("firstName"));
+        driver.findElement(By.id("input-lastname")).sendKeys(dataProp.getProperty("lastName"));
         driver.findElement(By.id("input-email")).sendKeys(generateEmailWithTimeStamp());
-        driver.findElement(By.id("input-telephone")).sendKeys("9878675643");
-        driver.findElement(By.id("input-password")).sendKeys("134123");
-        driver.findElement(By.xpath("//input[@id='input-confirm']")).sendKeys("134123");
+        driver.findElement(By.id("input-telephone")).sendKeys(dataProp.getProperty("telephoneNumber"));
+        driver.findElement(By.id("input-password")).sendKeys(dataProp.getProperty("password"));
+        driver.findElement(By.xpath("//input[@id='input-confirm']")).sendKeys(dataProp.getProperty("password"));
         driver.findElement(By.xpath("//label[normalize-space()='Yes']")).click();
         driver.findElement(By.xpath("//input[@name='agree']")).click();
         driver.findElement(By.xpath("//input[@value='Continue']")).click();
 
         String actualHeading=driver.findElement(By.xpath("//div[@id='content']/h1")).getText();
         System.out.println(actualHeading);
-        Assert.assertEquals(actualHeading,"Your Account Has Been Created!","Account Sucess Page is not created");
+        Assert.assertEquals(actualHeading,dataProp.getProperty("successMessage"),"Account Success Page is not created");
 
     }
     @Test(priority = 3)
     public void verifyRegisteringAnAccountByProvidingExistingEmail(){
-        driver.findElement(By.xpath("//input[@id='input-firstname']")).sendKeys("Testing");
-        driver.findElement(By.id("input-lastname")).sendKeys("Practice");
-        driver.findElement(By.id("input-email")).sendKeys("tpractice427@gmail.com");
-        driver.findElement(By.id("input-telephone")).sendKeys("9878675643");
-        driver.findElement(By.id("input-password")).sendKeys("134123");
-        driver.findElement(By.xpath("//input[@id='input-confirm']")).sendKeys("134123");
+        driver.findElement(By.xpath("//input[@id='input-firstname']")).sendKeys(dataProp.getProperty("firstName"));
+        driver.findElement(By.id("input-lastname")).sendKeys(dataProp.getProperty("lastName"));
+        driver.findElement(By.id("input-email")).sendKeys(prop.getProperty("validEmail"));
+        driver.findElement(By.id("input-telephone")).sendKeys(dataProp.getProperty("telephoneNumber"));
+        driver.findElement(By.id("input-password")).sendKeys(dataProp.getProperty("password"));
+        driver.findElement(By.xpath("//input[@id='input-confirm']")).sendKeys(dataProp.getProperty("password"));
         driver.findElement(By.xpath("//label[normalize-space()='Yes']")).click();
         driver.findElement(By.xpath("//input[@name='agree']")).click();
         driver.findElement(By.xpath("//input[@value='Continue']")).click();
 
         String actualError=driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText();
         System.out.println(actualError);
-        Assert.assertEquals(actualError,"Warning: E-Mail Address is already registered!","Existing Email ID given");
+        Assert.assertEquals(actualError,dataProp.getProperty("duplicateEmailWarning"),"Existing Email ID given");
 
     }
     @Test(priority = 4)
@@ -80,22 +80,22 @@ public class Register extends BaseClass {
         driver.findElement(By.xpath("//input[@value='Continue']")).click();
         String privacyPolicyWarnings=driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText();
         System.out.println(privacyPolicyWarnings);
-        Assert.assertEquals(privacyPolicyWarnings,"Warning: You must agree to the Privacy Policy!");
+        Assert.assertEquals(privacyPolicyWarnings,dataProp.getProperty("privacyPolicyWarning"));
         String firstNameWarning=driver.findElement(By.xpath("//input[@id='input-firstname']/following-sibling::div[@class='text-danger']")).getText();
         System.out.println(firstNameWarning);
-        Assert.assertEquals(firstNameWarning,"First Name must be between 1 and 32 characters!");
+        Assert.assertEquals(firstNameWarning,dataProp.getProperty("firstNameWarning"));
         String lastNameWarning=driver.findElement(By.xpath("//input[@id='input-lastname']/following-sibling::div[@class='text-danger']")).getText();
         System.out.println(lastNameWarning);
-        Assert.assertEquals(lastNameWarning,"Last Name must be between 1 and 32 characters!");
+        Assert.assertEquals(lastNameWarning,dataProp.getProperty("lastNameWarning"));
         String emailWarning=driver.findElement(By.xpath("//input[@id='input-email']/following-sibling::div[@class='text-danger']")).getText();
         System.out.println(emailWarning);
-        Assert.assertEquals(emailWarning,"E-Mail Address does not appear to be valid!");
+        Assert.assertEquals(emailWarning,dataProp.getProperty("emailWarning"));
         String telephoneWarning=driver.findElement(By.xpath("//input[@id='input-telephone']/following-sibling::div[@class='text-danger']")).getText();
         System.out.println(telephoneWarning);
-        Assert.assertEquals(telephoneWarning,"Telephone must be between 3 and 32 characters!");
+        Assert.assertEquals(telephoneWarning,dataProp.getProperty("telephoneWarning"));
         String passwordWarning=driver.findElement(By.xpath("//input[@id='input-password']/following-sibling::div[@class='text-danger']")).getText();
         System.out.println(passwordWarning);
-        Assert.assertEquals(passwordWarning,"Password must be between 4 and 20 characters!");
+        Assert.assertEquals(passwordWarning,dataProp.getProperty("passwordWarning"));
 
     }
     @AfterMethod
