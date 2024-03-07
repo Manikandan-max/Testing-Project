@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f038889-41b2-42f5-8daf-e62c0c870be8" name="Changes" comment="Register and Search Functionalities Test Added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/project/qa/testData/testData.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/project/qa/utils/ReadExcel.java" afterDir="false" />
+    <list default="true" id="9f038889-41b2-42f5-8daf-e62c0c870be8" name="Changes" comment="Excel Integration and Cleaned the hard-coded lines with Properties file">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/project/qa/pages/AccountPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/project/qa/pages/AccountSuccessPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/project/qa/pages/HomePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/project/qa/pages/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/project/qa/pages/RegisterPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/project/qa/pages/SearchPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/project/qa/config/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/project/qa/config/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/project/qa/base/BaseClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/project/qa/base/BaseClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/project/qa/testcases/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/project/qa/testcases/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/project/qa/testcases/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/project/qa/testcases/Register.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/project/qa/testcases/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/project/qa/testcases/Search.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/org/project/qa/testcases/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/org/project/qa/testcases/Login.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +67,7 @@
       <recent name="C:\Users\hariv\OneDrive\Documents\Testing Projects\AutomationPracticeApp\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Login.verifyWithValidCredentials">
+  <component name="RunManager" selected="TestNG.C:/Users/hariv/OneDrive/Documents/Testing Projects/AutomationPracticeApp/src/test/resources/testng.xml">
     <configuration name="C:/Users/hariv/OneDrive/Documents/Testing Projects/AutomationPracticeApp/src/main/resources/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="TutorialsNinjaProject" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/resources/testng.xml" />
@@ -210,8 +211,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Login.verifyWithValidCredentials" />
         <item itemvalue="TestNG.C:/Users/hariv/OneDrive/Documents/Testing Projects/AutomationPracticeApp/src/test/resources/testng.xml" />
+        <item itemvalue="TestNG.Login.verifyWithValidCredentials" />
         <item itemvalue="TestNG.C:/Users/hariv/OneDrive/Documents/Testing Projects/AutomationPracticeApp/src/main/resources/testng.xml" />
         <item itemvalue="TestNG.C:/Users/hariv/OneDrive/Documents/Testing Projects/AutomationPracticeApp/testng.xml" />
         <item itemvalue="TestNG.Search.verifySearchingWithoutProductName" />
@@ -234,7 +235,9 @@
       <workItem from="1709520617646" duration="6410000" />
       <workItem from="1709605094159" duration="4400000" />
       <workItem from="1709609532975" duration="99000" />
-      <workItem from="1709616636354" duration="4389000" />
+      <workItem from="1709616636354" duration="4646000" />
+      <workItem from="1709695547735" duration="119000" />
+      <workItem from="1709796490772" duration="6924000" />
     </task>
     <task id="LOCAL-00001" summary="Register and Search Functionalities Test Added">
       <option name="closed" value="true" />
@@ -244,7 +247,23 @@
       <option name="project" value="LOCAL" />
       <updated>1709609611724</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Excel Integration and Cleaned the hard-coded lines with Properties file">
+      <option name="closed" value="true" />
+      <created>1709621248017</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1709621248017</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Excel Integration and Cleaned the hard-coded lines with Properties file">
+      <option name="closed" value="true" />
+      <created>1709621274539</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709621274539</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +271,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Register and Search Functionalities Test Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Register and Search Functionalities Test Added" />
+    <MESSAGE value="Excel Integration and Cleaned the hard-coded lines with Properties file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Excel Integration and Cleaned the hard-coded lines with Properties file" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

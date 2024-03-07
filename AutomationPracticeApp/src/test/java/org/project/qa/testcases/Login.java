@@ -3,6 +3,9 @@ package org.project.qa.testcases;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.project.qa.base.BaseClass;
+import org.project.qa.pages.AccountPage;
+import org.project.qa.pages.HomePage;
+import org.project.qa.pages.LoginPage;
 import org.project.qa.utils.ReadExcel;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -23,28 +26,29 @@ public class Login extends BaseClass {
     @BeforeMethod
     public void openURL() {
         driver = invokeBrowser(prop.getProperty("browser"));
-        driver.findElement(By.xpath("//span[normalize-space()='My Account']")).click();
-        driver.findElement(By.xpath("//a[normalize-space()='Login']")).click();
-
+        HomePage homePage = new HomePage(driver);
+        homePage.clickOnMyAccountDropMenu();
+        homePage.selectLoginOption();
     }
 
-    @Test(priority = 1,dataProvider = "getData")
-    public void verifyWithValidCredentials(String email,String password) {
-//        driver.findElement(By.id("input-email")).sendKeys(prop.getProperty("validEmail"));
-        driver.findElement(By.id("input-email")).sendKeys(email);
-//        driver.findElement(By.id("input-password")).sendKeys(prop.getProperty("validPassword"));
-        driver.findElement(By.id("input-password")).sendKeys(password);
-        driver.findElement(By.xpath("//input[@value='Login']")).click();
-        Assert.assertTrue(driver.findElement(By.linkText("Edit your account information")).isDisplayed());
+    @Test(priority = 1, dataProvider = "getData")
+    public void verifyWithValidCredentials(String email, String password) {
+
+        LoginPage loginPage=new LoginPage(driver);
+        loginPage.enterEmailAddress(email);
+        loginPage.enterPassword(password);
+        AccountPage accountPage= loginPage.clickOnLoginButton();
+        Assert.assertTrue(accountPage.getDisplayStatusOfEditYourAccountInfo());
     }
 
     @Test(priority = 2)
     public void verifyWithInvalidCredentials() {
 
-        driver.findElement(By.id("input-email")).sendKeys(generateEmailWithTimeStamp());
-        driver.findElement(By.id("input-password")).sendKeys(dataProp.getProperty("invalidPassword"));
-        driver.findElement(By.xpath("//input[@value='Login']")).click();
-        String errorText = driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText();
+        LoginPage loginPage=new LoginPage(driver);
+        loginPage.enterEmailAddress(generateEmailWithTimeStamp());
+        loginPage.enterPassword(dataProp.getProperty("invalidPassword"));
+        loginPage.clickOnLoginButton();
+        String errorText = loginPage.retrieveWarningMessageText();
         System.out.println(errorText);
         Assert.assertEquals(errorText, dataProp.getProperty("emailPasswordNoMatch"));
 
@@ -52,21 +56,22 @@ public class Login extends BaseClass {
 
     @Test(priority = 3)
     public void verifyLoginWithInvalidEmailAndValidPassword() {
-        driver.findElement(By.id("input-email")).sendKeys( generateEmailWithTimeStamp());
-        driver.findElement(By.id("input-password")).sendKeys(prop.getProperty("validPassword"));
-        driver.findElement(By.xpath("//input[@value='Login']")).click();
-        String errorText = driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText();
+        LoginPage loginPage=new LoginPage(driver);
+        loginPage.enterEmailAddress(generateEmailWithTimeStamp());
+        loginPage.enterPassword(prop.getProperty("validPassword"));
+        loginPage.clickOnLoginButton();
+        String errorText = loginPage.retrieveWarningMessageText();
         System.out.println(errorText);
         Assert.assertEquals(errorText, dataProp.getProperty("emailPasswordNoMatch"));
-
     }
 
     @Test(priority = 4)
     public void verifyLoginWithValidEmailAndInvalidPassword() {
-        driver.findElement(By.id("input-email")).sendKeys(prop.getProperty("validEmail"));
-        driver.findElement(By.id("input-password")).sendKeys(dataProp.getProperty("invalidPassword"));
-        driver.findElement(By.xpath("//input[@value='Login']")).click();
-        String errorText = driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText();
+        LoginPage loginPage=new LoginPage(driver);
+        loginPage.enterEmailAddress(prop.getProperty("validEmail"));
+        loginPage.enterPassword(dataProp.getProperty("invalidPassword"));
+        loginPage.clickOnLoginButton();
+        String errorText = loginPage.retrieveWarningMessageText();
         System.out.println(errorText);
         Assert.assertEquals(errorText, dataProp.getProperty("emailPasswordNoMatch"));
     }
@@ -74,10 +79,9 @@ public class Login extends BaseClass {
     @Test(priority = 5)
     public void verifyLoginWithoutProvidingCredentials() {
 
-//        driver.findElement(By.id("input-email")).sendKeys("");
-//        driver.findElement(By.id("input-password")).sendKeys("");
-        driver.findElement(By.xpath("//input[@value='Login']")).click();
-        String errorText = driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText();
+        LoginPage loginPage=new LoginPage(driver);
+        loginPage.clickOnLoginButton();
+        String errorText = loginPage.retrieveWarningMessageText();
         System.out.println(errorText);
         Assert.assertEquals(errorText, dataProp.getProperty("emailPasswordNoMatch"));
 
