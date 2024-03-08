@@ -39,4 +39,11 @@ public class LoginPage {
         return warningText;
 
     }
+    public AccountPage doLogin(String emailText, String passwordText){
+        emailAddress.sendKeys(emailText);
+        passwordField.sendKeys(passwordText);
+        loginButton.click();
+        return PageFactory.initElements(driver, AccountPage.class);
+
+    }
 }

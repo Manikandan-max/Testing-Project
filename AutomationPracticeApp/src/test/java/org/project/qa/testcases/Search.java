@@ -13,6 +13,8 @@ import org.testng.annotations.Test;
 public class Search extends BaseClass {
 
     WebDriver driver;
+    SearchPage searchPage;
+    HomePage homePage;
 
     public Search() {
         super();
@@ -21,24 +23,20 @@ public class Search extends BaseClass {
     @BeforeMethod
     public void openUrl() {
         driver = invokeBrowser(prop.getProperty("browser"));
+        homePage=new HomePage(driver);
 
     }
 
     @Test(priority = 1)
     public void verifySearchingWithAnExistingProductName() {
-        HomePage homePage = new HomePage(driver);
-
-        homePage.enterProductInSearchBoxField(dataProp.getProperty("validProduct"));
-        SearchPage searchPage = homePage.clickOnSearchButton();
+        searchPage = homePage.searchForAProduct(dataProp.getProperty("validProduct"));
         Assert.assertTrue(searchPage.verifyValidProductIsDisplayed());
 
     }
 
     @Test(priority = 2)
     public void verifySearchingWithNonExistingProductName() {
-        HomePage homePage = new HomePage(driver);
-        homePage.enterProductInSearchBoxField(dataProp.getProperty("invalidProduct"));
-        SearchPage searchPage = homePage.clickOnSearchButton();
+        searchPage=homePage.searchForAProduct(dataProp.getProperty("invalidProduct"));
         String actualMessage = searchPage.verifyNoProductMatchingText();
         System.out.println(actualMessage);
         Assert.assertEquals(actualMessage, dataProp.getProperty("noProductSearchResults"), "Product is found!");
@@ -47,8 +45,7 @@ public class Search extends BaseClass {
 
     @Test(priority = 3)
     public void verifySearchingWithoutProductName() {
-        HomePage homePage=new HomePage(driver);
-        SearchPage searchPage = homePage.clickOnSearchButton();
+        searchPage = homePage.clickOnSearchButton();
         String actualMessage = searchPage.verifyNoProductMatchingText();
         System.out.println(actualMessage);
         Assert.assertEquals(actualMessage, dataProp.getProperty("noProductSearchResults"), "Product is found!");

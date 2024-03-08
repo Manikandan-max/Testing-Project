@@ -31,17 +31,38 @@ public class HomePage {
     public void clickOnMyAccountDropMenu(){
         myAccountDropMenu.click();
     }
-    public void selectLoginOption(){
+
+    public LoginPage navigateToLoginPage(){
+        myAccountDropMenu.click();
         loginOption.click();
+        return PageFactory.initElements(driver, LoginPage.class);
     }
-    public void selectRegisterOption(){
+    public LoginPage selectLoginOption(){
+
+        loginOption.click();
+        return PageFactory.initElements(driver, LoginPage.class);
+    }
+    public RegisterPage selectRegisterOption(){
+
         registerOption.click();
+        return PageFactory.initElements(driver, RegisterPage.class);
+    }
+    public RegisterPage navigateToRegisterPage(){
+        myAccountDropMenu.click();
+        registerOption.click();
+        return PageFactory.initElements(driver, RegisterPage.class);
     }
 
     public void enterProductInSearchBoxField(String product){
+
         searchBoxField.sendKeys(product);
     }
     public SearchPage clickOnSearchButton(){
+        searchButton.click();
+        return PageFactory.initElements(driver, SearchPage.class);
+    }
+    public SearchPage searchForAProduct(String product){
+        enterProductInSearchBoxField(product);
         searchButton.click();
         return PageFactory.initElements(driver, SearchPage.class);
     }

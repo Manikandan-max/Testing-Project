@@ -5,6 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class RegisterPage {
 
     WebDriver driver;
@@ -54,7 +57,7 @@ public class RegisterPage {
         PageFactory.initElements(driver,this);
     }
 
-    public void doRegisterAccountWithMandatoryFields(String firstname,String lastname,String pwd,String email,String phone){
+    public AccountSuccessPage doRegisterAccountWithMandatoryFields(String firstname, String lastname, String pwd, String email, String phone){
         firstName.sendKeys(firstname);
         lastName.sendKeys(lastname);
         emailId.sendKeys(email);
@@ -63,9 +66,10 @@ public class RegisterPage {
         confirmPassword.sendKeys(pwd);
         privacyPolicy.click();
         continueButton.click();
+        return PageFactory.initElements(driver, AccountSuccessPage.class);
 
     }
-    public void doRegisterAccount(String firstname,String lastname,String pwd,String email,String phone){
+    public AccountSuccessPage doRegisterAccount(String firstname, String lastname, String pwd, String email, String phone){
         firstName.sendKeys(firstname);
         lastName.sendKeys(lastname);
         emailId.sendKeys(email);
@@ -75,6 +79,7 @@ public class RegisterPage {
         subscribeNewsOption.click();
         privacyPolicy.click();
         continueButton.click();
+        return PageFactory.initElements(driver, AccountSuccessPage.class);
 
     }
     public void enterFirstNameField(String firstNameText){
@@ -132,5 +137,20 @@ public class RegisterPage {
     public String retrieveTelephoneWarning(){
         String telephoneWarningText = telephoneWarning.getText();
         return telephoneWarningText;
+    }
+    public List<String> registerAccountWithoutFillingDetailsAndRetrieveWarnings() {
+        clickOnContinueButton();
+
+        List<String> warnings = Arrays.asList(
+                retrieveFirstNameWarningText(),
+                retrieveLastNameWarningText(),
+                retrieveEmailWarningText(),
+                retrievePrivatePolicyWarningText(),
+                retrieveTelephoneWarning(),
+                retrievePasswordWarningText()
+        );
+
+        warnings.forEach(System.out::println);
+        return warnings;
     }
 }
