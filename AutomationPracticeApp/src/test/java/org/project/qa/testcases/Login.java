@@ -6,7 +6,6 @@ import org.project.qa.pages.AccountPage;
 import org.project.qa.pages.HomePage;
 import org.project.qa.pages.LoginPage;
 import org.testng.Assert;
-import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -70,11 +69,7 @@ public class Login extends BaseClass {
     }
 
     @AfterMethod
-    public void tearDown(ITestResult result) {
-        if (result.getStatus()==ITestResult.FAILURE){
-            takeScreenshotOnFailure(result);
-        }
-
+    public void tearDown() {
         driver.quit();
     }
 }

@@ -1,6 +1,5 @@
 package org.project.qa.testcases;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.project.qa.base.BaseClass;
 import org.project.qa.pages.HomePage;
@@ -12,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class Search extends BaseClass {
 
-    WebDriver driver;
+   public WebDriver driver;
     SearchPage searchPage;
     HomePage homePage;
 
@@ -43,7 +42,7 @@ public class Search extends BaseClass {
 
     }
 
-    @Test(priority = 3)
+    @Test(priority = 3,dependsOnMethods = {"verifySearchingWithNonExistingProductName"})
     public void verifySearchingWithoutProductName() {
         searchPage = homePage.clickOnSearchButton();
         String actualMessage = searchPage.verifyNoProductMatchingText();

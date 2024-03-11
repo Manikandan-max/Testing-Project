@@ -1,8 +1,5 @@
 package org.project.qa.base;
 
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -11,8 +8,6 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.project.qa.utils.ElementUtils;
 import org.project.qa.utils.ReadExcel;
-import org.testng.ITestResult;
-import org.testng.Reporter;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.DataProvider;
 
@@ -20,14 +15,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.time.Duration;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.Properties;
-
-import static java.sql.DriverManager.getDriver;
 
 public class BaseClass {
 
@@ -101,19 +90,19 @@ public BaseClass(){
             }
         }
     }
-    public void takeScreenshotOnFailure(ITestResult result) {
-        if (result.getStatus() == ITestResult.FAILURE) {
-            try {
-                TakesScreenshot screenshot = (TakesScreenshot) driver;
-                File sourceFile = screenshot.getScreenshotAs(OutputType.FILE);
-                String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
-                Path destinationPath = Paths.get("screenshots", result.getName() + "_" + timestamp + ".png");
-                FileUtils.copyFile(sourceFile, destinationPath.toFile());
-                System.out.println("Screenshot saved: " + destinationPath);
-            } catch (IOException e) {
-                System.out.println("Failed to take screenshot: " + e.getMessage());
-            }
-        }
-    }
+//    public static void takeScreenshotOnFailure(ITestResult result) {
+//        if (result.getStatus() == ITestResult.FAILURE) {
+//            try {
+//                TakesScreenshot screenshot = (TakesScreenshot) driver;
+//                File sourceFile = screenshot.getScreenshotAs(OutputType.FILE);
+//                String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
+//                Path destinationPath = Paths.get("screenshots", result.getName() + "_" + timestamp + ".png");
+//                FileUtils.copyFile(sourceFile, destinationPath.toFile());
+//                System.out.println("Screenshot saved: " + destinationPath);
+//            } catch (IOException e) {
+//                System.out.println("Failed to take screenshot: " + e.getMessage());
+//            }
+//        }
+//    }
 
 }
