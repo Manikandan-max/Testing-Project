@@ -15,11 +15,11 @@ import java.util.List;
 
 import static org.project.qa.utils.ElementUtils.generateEmailWithTimeStamp;
 
-public class Register extends BaseClass {
+public class RegisterTest extends BaseClass {
     public WebDriver driver;
     RegisterPage registerPage;
     AccountSuccessPage accountSuccessPage;
-    public Register() {
+    public RegisterTest() {
         super();
     }
 

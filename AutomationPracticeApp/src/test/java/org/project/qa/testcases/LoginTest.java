@@ -12,12 +12,12 @@ import org.testng.annotations.Test;
 
 import static org.project.qa.utils.ElementUtils.generateEmailWithTimeStamp;
 
-public class Login extends BaseClass {
+public class LoginTest extends BaseClass {
 
     public WebDriver driver;
     LoginPage  loginPage;
 
-    public Login() {
+    public LoginTest() {
         super();
     }
 
